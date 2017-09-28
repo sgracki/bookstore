@@ -1,0 +1,16 @@
+<md-card class="card">
+    <h1 class="card--h1">Add author</h1>
+    <form class="card--form" #myForm="ngForm" (submit)="addAuthor(); myForm.reset()">
+        <md-form-field class="card--form--input">
+            <input minlength="4" mdInput [(ngModel)]="author.name" name="name" placeholder="Name">
+        </md-form-field>
+        <md-form-field class="card--form--input">
+            <input minlength="4" mdInput [(ngModel)]="author.surname" name="surname" placeholder="Surname">
+        </md-form-field>
+        <md-form-field class="card--form--input">
+            <input [disabled]="!author.alive" mdInput [(ngModel)]="author.age" name="age" placeholder="Age">
+        </md-form-field>
+        <md-checkbox [(ngModel)]="author.alive" name="alive">Is he/she alive?</md-checkbox>
+        <button md-button color="primary" class="card--form--btn">Confirm</button>
+    </form>
+</md-card>

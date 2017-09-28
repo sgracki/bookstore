@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,700,800,900');
+
+body, html {
+    background-color: #F1F1F1;
+    width: 100%;
+    /* margin-left: 20%; */
+    /* margin-right: 20%; */
+}

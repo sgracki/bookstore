@@ -1,0 +1,16 @@
+<md-card class="card">
+    <md-list class="card--list">
+        <md-list-item class="card--list--item" *ngFor="let item of books">
+            <div class="card--list--item--half">
+                {{item.title}} (borrowed {{item.borrowedAmount}}/{{item.amount}})
+            </div>
+            <div class="card--list--item--half text--right">
+                <button 
+                    class="card--list--item--button" 
+                    (click)="borrowBook(item)" 
+                md-button>Borrow</button>
+            </div>
+        </md-list-item>
+        <h5 class="card--list--h5" [hidden]="books && books.length > 0">There is no books to show!</h5>
+    </md-list>
+</md-card>

@@ -1,0 +1,23 @@
+<md-card class="card">
+    <h1 class="card--h1">Add book to the bookstore</h1>
+    <form #myForm="ngForm" class="card--form" (submit)="addBook(); myForm.reset()">
+        <md-form-field class="card--form--input">
+            <input minlength="4" mdInput [(ngModel)]="book.title" name="title" placeholder="Title">
+        </md-form-field>
+        <md-form-field class="card--form--input">
+            <input minlength="4" mdInput [(ngModel)]="book.description" name="description" placeholder="Description">
+        </md-form-field>
+        <md-form-field class="card--form--input">
+            <input mdInput [(ngModel)]="book.amount" name="amount" placeholder="Amount">
+        </md-form-field>
+        <md-form-field class="card--form--input">
+            <input minlength="4" mdInput [(ngModel)]="book.imageUrl" name="imageUrl" placeholder="Photo">
+        </md-form-field>
+        <md-select class="card--form--select" placeholder="Autor" [(ngModel)]="book.author" name="author">
+            <md-option *ngFor="let author of authors" [value]="author._id">
+                {{ author.surname }}
+            </md-option>
+        </md-select>
+        <button md-button color="primary" class="card--form--btn">Confirm</button>
+    </form>
+</md-card>
